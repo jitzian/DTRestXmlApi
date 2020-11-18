@@ -1,6 +1,7 @@
 package com.example.digital.turbine.assigment.dagger.components
 
 import com.example.digital.turbine.assigment.dagger.modules.RetrofitModule
+import com.example.digital.turbine.assigment.showAds.viewmodels.ShowAdsViewModel
 import dagger.Component
 
 @Component(
@@ -10,8 +11,7 @@ import dagger.Component
 )
 interface ComponentInjector {
 
-    //TODO: Where to inject??
-    fun inject()
+    fun inject(showAdsViewModel: ShowAdsViewModel)
 
     @Component.Builder
     interface Builder {
