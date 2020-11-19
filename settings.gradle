@@ -1,2 +1,3 @@
+include ':app:networkUitl'
 include ':app'
 rootProject.name = "DigitalTurbineAssigment"
