@@ -1,6 +1,5 @@
 package com.example.digital.turbine.assigment.showAds.viewmodels
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
@@ -35,7 +34,7 @@ class ShowAdsViewModel : BaseViewModel() {
         fetchRemoteData()
     }
 
-    private val listOfAds: MutableLiveData<List<Ad>> by lazy {
+    private val listOfAds: MutableLiveData<List<Ad>> by lazy(LazyThreadSafetyMode.SYNCHRONIZED) {
         MutableLiveData<List<Ad>>()
     }
 
@@ -43,13 +42,8 @@ class ShowAdsViewModel : BaseViewModel() {
         return listOfAds
     }
 
-    fun fetchRemoteData() = viewModelScope.launch(Dispatchers.IO) {
-
-//        listOfAds.postValue(restApi.getAds().execute().body()?.listOfAds)
-        val result = restApi.getAds().execute().body()
-        Log.e(TAG, "fetchRemoteData::${result?.listOfAds?.size}")
-
-
+    private fun fetchRemoteData() = viewModelScope.launch(Dispatchers.IO) {
+        listOfAds.postValue(restApi.getAds().execute().body()?.listOfAds)
     }
 
 }
