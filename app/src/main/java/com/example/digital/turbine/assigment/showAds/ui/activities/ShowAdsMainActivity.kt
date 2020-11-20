@@ -1,4 +1,4 @@
-package com.example.digital.turbine.assigment
+package com.example.digital.turbine.assigment.showAds.ui.activities
 
 import android.os.Bundle
 import android.util.Log
@@ -8,15 +8,14 @@ import com.example.digital.turbine.assigment.base.activities.BaseActivity
 import com.example.digital.turbine.assigment.databinding.ActivityMainBinding
 import com.example.digital.turbine.assigment.showAds.adapters.RVCustomAdapter
 import com.example.digital.turbine.networkuitl.ConnectionType
-import com.example.digital.turbine.networkuitl.NetworkMonitorUtil
 
-class MainActivity : BaseActivity() {
+class ShowAdsMainActivity : BaseActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var layoutManager: LinearLayoutManager
     private lateinit var adapter: RVCustomAdapter
 
     init {
-        TAG = MainActivity::class.java.simpleName
+        TAG = ShowAdsMainActivity::class.java.simpleName
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -64,7 +63,7 @@ class MainActivity : BaseActivity() {
         if(isConnected) {
             showAdsViewModel.getLisOfAds().observe(this, Observer { listOfAds ->
                 Log.e(TAG, "setupObservers::$listOfAds")
-                adapter = RVCustomAdapter()
+                adapter = RVCustomAdapter(supportFragmentManager)
                 adapter.setListOfAds(listOfAds)
                 binding.mRecyclerViewMainScreen.adapter = adapter
 
