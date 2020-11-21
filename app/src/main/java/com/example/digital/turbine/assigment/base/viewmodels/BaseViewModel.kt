@@ -8,5 +8,5 @@ import kotlin.properties.Delegates
 abstract class BaseViewModel : ViewModel() {
     protected var TAG: String by Delegates.notNull()
     protected var logger: Logger by Delegates.notNull()
-    protected var restApi: RestApi by Delegates.notNull()
+    protected var restApi: RestApi? = null
 }

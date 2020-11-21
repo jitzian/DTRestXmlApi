@@ -69,8 +69,22 @@
         <item name="colorAccent">#FFAB40</item>
     </style>
 
-    <style name="dialog_theme" parent="android:Theme" >
+    <style name="dialog_theme" parent="android:Theme">
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="tagNameItemDetailTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/raisinBlackColor</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontWeight">500</item>
+        <item name="fontFamily">sans-serif-condensed-light</item>
+    </style>
+
+    <style name="tagNameItemDetailText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/raisinBlackColor</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontWeight">500</item>
+        <item name="fontFamily">sans-serif-thin</item>
     </style>
 </resources>

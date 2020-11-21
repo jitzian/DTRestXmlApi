@@ -43,7 +43,7 @@ class ShowAdsViewModel : BaseViewModel() {
     }
 
     private fun fetchRemoteData() = viewModelScope.launch(Dispatchers.IO) {
-        listOfAds.postValue(restApi.getAds().execute().body()?.listOfAds)
+        listOfAds.postValue(restApi?.getAds()?.execute()?.body()?.listOfAds)
     }
 
 }

@@ -17,14 +17,17 @@
             android:orientation="horizontal">
 
             <TextView
+                style="@style/tagNameItemDetailTitle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginEnd="@dimen/dp_4"
                 android:layout_weight=".5"
-                tools:text="AppId"
-                android:text="@string/text_appId"/>
+                android:text="@string/text_appId"
+                tools:text="AppId" />
 
             <TextView
                 android:id="@+id/mTextViewAppIdItemDetails"
+                style="@style/tagNameItemDetailText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"
@@ -37,14 +40,17 @@
             android:orientation="horizontal">
 
             <TextView
+                style="@style/tagNameItemDetailTitle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_4"
                 android:layout_weight=".5"
-                tools:text="AppId"
-                android:text="@string/text_averageRatingImageURL"/>
+                android:text="@string/text_averageRatingImageURL"
+                tools:text="AppId" />
 
             <TextView
                 android:id="@+id/mTextViewAverageRatingImageURLItemDetails"
+                style="@style/tagNameItemDetailText"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight=".5"

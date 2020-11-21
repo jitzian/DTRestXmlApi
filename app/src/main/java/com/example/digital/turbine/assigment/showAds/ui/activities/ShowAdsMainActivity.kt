@@ -51,7 +51,7 @@ class ShowAdsMainActivity : BaseActivity() {
                         }
                     }
                     false -> {
-                        Log.i("NETWORK_MONITOR_STATUS", "No Connection")
+                        Log.e("NETWORK_MONITOR_STATUS", "No Connection")
                         isConnected = false
                     }
                 }
@@ -62,7 +62,6 @@ class ShowAdsMainActivity : BaseActivity() {
     override fun setupObservers() {
         if(isConnected) {
             showAdsViewModel.getLisOfAds().observe(this, Observer { listOfAds ->
-                Log.e(TAG, "setupObservers::$listOfAds")
                 adapter = RVCustomAdapter(supportFragmentManager)
                 adapter.setListOfAds(listOfAds)
                 binding.mRecyclerViewMainScreen.adapter = adapter

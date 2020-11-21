@@ -1,6 +1,5 @@
 package com.example.digital.turbine.assigment.showAds.adapters
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.fragment.app.FragmentManager
@@ -11,7 +10,6 @@ import com.example.digital.turbine.assigment.showAds.ui.fragments.ItemDetailsDia
 import com.example.digital.turbine.assigment.showAds.ui.model.AdDetailUI
 import com.squareup.picasso.Picasso
 
-//class RVCustomAdapter : RecyclerView.Adapter<RVCustomAdapter.ViewHolder>() {
 class RVCustomAdapter(private val supportFragmentManager: FragmentManager) :
     RecyclerView.Adapter<RVCustomAdapter.ViewHolder>() {
 
@@ -46,7 +44,6 @@ class RVCustomAdapter(private val supportFragmentManager: FragmentManager) :
         }
 
         private fun loadViewModel(data: Ad) {
-//            itemDetailsViewModel.setAppIdUI(data.appId)
             dataUI = AdDetailUI(
                 data.appId,
                 data.averageRatingImageURL
@@ -55,16 +52,8 @@ class RVCustomAdapter(private val supportFragmentManager: FragmentManager) :
 
         private fun setupListeners() {
             binding.mButtonShowDetailAdItem.setOnClickListener {
-                Log.e("-->", "Goto Details")
-
-//                ItemDetailsDialogFragment().show(
-//                    supportFragmentManager,
-//                    ItemDetailsDialogFragment::class.java.simpleName
-//                )
-
                 ItemDetailsDialogFragment.newInstance(dataUI)
                     .show(supportFragmentManager, ItemDetailsDialogFragment::class.java.simpleName)
-
             }
         }
     }
