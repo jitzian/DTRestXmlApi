@@ -9,20 +9,18 @@ import android.net.Network
 import android.net.NetworkCapabilities
 import android.os.Build
 
-class NetworkMonitorUtil(context: Context) {
-
-    private var mContext = context
+@Suppress("all")
+class NetworkMonitorUtil(private val context: Context) {
 
     private lateinit var networkCallback: ConnectivityManager.NetworkCallback
 
     lateinit var result: ((isAvailable: Boolean, type: ConnectionType?) -> Unit)
 
-    @Suppress("DEPRECATION")
     fun register() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             // Use NetworkCallback for Android 9 and above
             val connectivityManager =
-                mContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+                context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
             if (connectivityManager.activeNetwork == null) {
 
@@ -62,17 +60,17 @@ class NetworkMonitorUtil(context: Context) {
             // Use Intent Filter for Android 8 and below
             val intentFilter = IntentFilter()
             intentFilter.addAction("android.net.conn.CONNECTIVITY_CHANGE")
-            mContext.registerReceiver(networkChangeReceiver, intentFilter)
+            context.registerReceiver(networkChangeReceiver, intentFilter)
         }
     }
 
     fun unregister() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
             val connectivityManager =
-                mContext.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
+                context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
             connectivityManager.unregisterNetworkCallback(networkCallback)
         } else {
-            mContext.unregisterReceiver(networkChangeReceiver)
+            context.unregisterReceiver(networkChangeReceiver)
         }
     }
 
@@ -88,18 +86,15 @@ class NetworkMonitorUtil(context: Context) {
                 // Get Type of Connection
                 when (activeNetworkInfo.type) {
                     ConnectivityManager.TYPE_WIFI -> {
-
                         // WIFI
                         result(true, ConnectionType.Wifi)
                     }
                     else -> {
-
                         // CELLULAR
                         result(true, ConnectionType.Cellular)
                     }
                 }
             } else {
-
                 // UNAVAILABLE
                 result(false, null)
             }
