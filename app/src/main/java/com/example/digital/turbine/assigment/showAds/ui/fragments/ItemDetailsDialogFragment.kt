@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
+import androidx.fragment.app.DialogFragment
+import com.example.digital.turbine.assigment.R
 import com.example.digital.turbine.assigment.base.fragments.BaseDialogFragment
 import com.example.digital.turbine.assigment.databinding.ItemDetailsFragmentBinding
 import com.example.digital.turbine.assigment.showAds.ui.model.AdDetailUI
@@ -47,19 +49,11 @@ class ItemDetailsDialogFragment : BaseDialogFragment() {
 
     private fun setupContent(){
         binding.mTextViewAppIdItemDetails.text = arguments?.getString(appId)
+        binding.mTextViewAverageRatingImageURLItemDetails.text = arguments?.getString(averageRatingImageURL)
     }
 
     override fun initView() {
         rootView = binding.root
-    }
-
-    override fun onStart() {
-        super.onStart().also {
-            dialog?.window?.setLayout(
-                WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.WRAP_CONTENT
-            )
-        }
     }
 
 }

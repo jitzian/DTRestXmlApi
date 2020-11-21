@@ -1,0 +1,76 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="raisinBlackText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/raisinBlackColor</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="raisinWhiteText" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="raisinBlackTextHeader" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/raisinBlackColor</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="raisinBlackTextForCardViews" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/raisinBlackColor</item>
+        <item name="android:textSize">20sp</item>
+        <item name="fontFamily">sans-serif-thin</item>
+    </style>
+
+    <style name="buttonActionStyle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:background">@color/raisinBlackColor</item>
+    </style>
+
+    <style name="raisinBlackTextTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/raisinBlackColor</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+
+    <style name="raisinBlackTextSubTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/raisinBlackColor</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:fontWeight">500</item>
+    </style>
+
+    <style name="raisinBlackTextTitleForTile" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/raisinBlackColor</item>
+        <item name="android:textSize">40sp</item>
+        <item name="fontFamily">sans-serif-thin</item>
+    </style>
+
+    <style name="whiteTextForActionMenu" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/colorWhite</item>
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">sans-serif-thin</item>
+    </style>
+
+    <style name="PrimaryFlatButton" parent="Theme.AppCompat.Light">
+        <item name="android:buttonStyle">
+            @style/Widget.AppCompat.Button.Borderless.Colored
+        </item>
+        <item name="colorAccent">#FFAB40</item>
+    </style>
+
+    <style name="dialog_theme" parent="android:Theme" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+</resources>

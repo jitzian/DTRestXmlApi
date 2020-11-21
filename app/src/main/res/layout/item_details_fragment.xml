@@ -6,12 +6,50 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:minWidth="400dp"
+        android:minHeight="400dp"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_16">
 
-        <TextView
-            android:id="@+id/mTextViewAppIdItemDetails"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                tools:text="AppId"
+                android:text="@string/text_appId"/>
+
+            <TextView
+                android:id="@+id/mTextViewAppIdItemDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                tools:text="AppId" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                tools:text="AppId"
+                android:text="@string/text_averageRatingImageURL"/>
+
+            <TextView
+                android:id="@+id/mTextViewAverageRatingImageURLItemDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                tools:text="AppId" />
+        </LinearLayout>
 
     </LinearLayout>
 </layout>
