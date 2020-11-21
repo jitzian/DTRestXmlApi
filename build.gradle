@@ -25,27 +25,33 @@ task clean(type: Delete) {
     delete rootProject.buildDir
 }
 ext.deps = [
-        'androidXAppCompat'                 :   '1.0.2',
-        'androidXLegacySupportVersionLib'   :   '1.0.0',
-        'androidMaterialVersionLib'         :   '1.3.0-alpha03',
-        'androidXConstraintLayoutVersionLib':   '1.1.3',
-        'androidXCardViewVersionLib'        :   '1.0.0',
-        'testRunner'                        :   '1.1.1',
-        'androidXEspressoCoreVersionLib'    :   '3.1.1',
-        'androidXCoreKtx'                   :   '1.3.2',
-        'androidXRecyclerViewVersionLib'    :   '1.0.0',
-        'retrofitVersionLib'                :   '2.8.1',
-        'gsonVersionLib'                    :   '2.8.1',
-        'spekVersion'                       :   '1.1.5',
-        'androidJunit5Version'              :   '1.0.12',
-        'junitPlatformVersion'              :   '1.2.0',
-        'googleMapsVersionLib'              :   '16.1.0',
-        'roomVersion'                       :   '2.3.0-alpha03',
-        'coroutinesVersionLib'              :   '1.3.5',
-        'daggerVersionLib'                  :   '2.28',
-        'picassoVersionLib'                 :   '2.71828',
-        'mockitoCoreVersionLib'             :   '2.19.0',
-        'nhaarmanMockitoVersionLib'         :   '1.5.0',
-        'lifecycleVersionLib'               :   '1.1.1',
-        'jUnitVersionLib'                   :   '4.12'
+        'coreKtxVersionLib'                         :       '1.3.2',
+        'appCompatVersionLib'                       :       '1.2.0',
+        'androidMaterialVersionLib'                 :       '1.2.1',
+        'constraintLayoutVersionLib'                :       '2.0.4',
+        'navigationKtxVersionLib'                   :       '2.3.1',
+        'lifeCycleExtensionsVersionLib'             :       '2.2.0',
+
+
+        //Coroutines
+        'coroutinesVersionLibCore'                  :       '1.3.7',
+        'coroutinesVersionAndroidLibCore'           :       '1.3.5',
+
+        //Retrofit
+        'retrofitVersionLib'                        :       '2.8.1',
+        'gsonVersionLib'                            :       '2.8.1',
+        'googleCodeGsonVersionLib'                  :       '2.8.5',
+        'okHttpVersionLib'                          :       '4.5.0',
+        'okHttpLoggingIncerceptorVersionLib'        :       '4.5.0',
+        'converterSimpleXmlVersionLib'              :       '2.3.0',
+
+        'daggerVersionLib'                          :       '2.28',
+        'picassoVersionLib'                         :       '2.71828',
+        'lifecycleVersionLib'                       :       '1.1.1',
+        'androidXRecyclerViewVersionLib'            :       '1.0.0',
+        'androidXAppCompat'                         :       '1.0.2',
+        'androidXLegacySupportVersionLib'           :       '1.0.0',
+        'androidLegacySupportVersionLib'            :       '1.0.0',
+        'supportDesignVersionLib'                   :       '28.0.0',
+
 ]
